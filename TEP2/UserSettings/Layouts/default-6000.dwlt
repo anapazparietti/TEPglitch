@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 310.40002
     height: 398.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -121,8 +121,8 @@ MonoBehaviour:
     y: 0
     width: 269.6
     height: 398.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/SCRIPTS
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -362,16 +362,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/SCRIPTS
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\Developer\TEPglitch\TEP2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5ca70000
-    m_LastClickedID: 42844
-    m_ExpandedIDs: 0000000054a70000
+    m_SelectedIDs: 6aa70000
+    m_LastClickedID: 42858
+    m_ExpandedIDs: 0000000062a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5ca70000
+      m_SelectedIDs: dc810000
       m_LastClickedID: 0
       m_ExpandedIDs: fcfaffff
       m_RenameOverlay:
@@ -1188,11 +1188,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.07670377, y: -0.023926537, z: 0.0018435878, w: 0.99678546}
     speed: 2
-    m_Value: {x: 0.07670642, y: -0.02153374, z: 0.0016594593, w: 0.9968198}
+    m_Value: {x: 0.076702215, y: -0.023926053, z: 0.0018435505, w: 0.99676526}
   m_Size:
     m_Target: 5.542631
     speed: 2
-    m_Value: 5.803802
+    m_Value: 5.542631
   m_Ortho:
     m_Target: 1
     speed: 2
