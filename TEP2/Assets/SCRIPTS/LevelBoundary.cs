@@ -11,6 +11,8 @@ public class LevelBoundary : MonoBehaviour
 
     void Update()
     {
+        internalLeft = leftSide;
+        internalRight = rightSide;
         
     }
 }
