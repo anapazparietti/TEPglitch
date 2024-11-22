@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 7; 
-
-
+    public float moveSpeed = 10; 
     void Start()
     {
     }
     void Update()
-    { //------MOVIMIENTO-----
+    { 
+        Debug.Log("la velocidad actual es de" + moveSpeed);
+        Movimiento();
+    }
+    void Movimiento()
+    {
         //para moverse hacia adelante
         if(Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward*Time.deltaTime*moveSpeed,Space.World);
         }
-        //para moverse hacia los costados
         //izquierda
        if(Input.GetKey(KeyCode.A))
        {
-        //para delimitar que el jugador no pase los límites de la pista
+        //----para delimitar que el jugador no pase los límites de la pista
         if(this.gameObject.transform.position.x > LevelBoundary.leftSide){
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
         }
@@ -34,7 +36,28 @@ public class Player : MonoBehaviour
          transform.Translate(Vector3.left * Time.deltaTime * moveSpeed * -1);
         }
        }
-
+    }
+//----COLISIONES----
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("Obstacle"))
+        {
+            DisminuyeVelocidad();
+        }
+    }
+//----CAMBIOS DE VELOCIDADES----
+    void AumentoVelocidad()
+    {
+        if(moveSpeed<14)
+        {
+            Debug.Log("al jugador se le aumenta la velocidad");
+            moveSpeed +=1;
+        }
     }
 
+    public void DisminuyeVelocidad()
+    {
+        Debug.Log("al jugador se le disminuye la velocidad");
+        moveSpeed = 5;
+    }
 }
