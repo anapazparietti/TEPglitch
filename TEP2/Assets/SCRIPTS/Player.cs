@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 10; 
+    public float moveSpeed = 7; 
     //para luego realizar el aumento de velocidad
      private float lastIncreaseTime = 0f;
      public float increaseInterval = 1;
+     private bool isHoldingW = false;
     void Start()
     {
     }
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour
                 lastIncreaseTime = Time.time; // Actualiza el tiempo del último aumento
             }else if (Time.time - lastIncreaseTime > increaseInterval)
             {
-                moveSpeed = Mathf.Max(10, moveSpeed - 1 * Time.deltaTime); // Baja la velocidad gradualmente
+                moveSpeed = Mathf.Max(7, moveSpeed - 1 * Time.deltaTime); // Baja la velocidad gradualmente
 
             }
         }
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
         Debug.Log("La velocidad se reduce temporalmente");
         moveSpeed = nuevaVelocidad;
         yield return new WaitForSeconds(duracion); 
-        moveSpeed = 10;
+        moveSpeed = 7;
         Debug.Log("Velocidad restaurada");
     }
 }
