@@ -42,7 +42,8 @@ public class Player : MonoBehaviour
     {
         if(other.CompareTag("Obstacle"))
         {
-            DisminuyeVelocidad();
+            StartCoroutine(DisminuyeVelocidad(5, 2f)); // Reduce velocidad a 5 por 2 segundos
+
         }
     }
 //----CAMBIOS DE VELOCIDADES----
@@ -54,10 +55,13 @@ public class Player : MonoBehaviour
             moveSpeed +=1;
         }
     }
-
-    public void DisminuyeVelocidad()
+// CORRUTINA PARA DISMINUIR LA VELOCIDAD
+    IEnumerator DisminuyeVelocidad(float nuevaVelocidad, float duracion)
     {
-        Debug.Log("al jugador se le disminuye la velocidad");
-        moveSpeed = 5;
+        Debug.Log("La velocidad se reduce temporalmente");
+        moveSpeed = nuevaVelocidad;
+        yield return new WaitForSeconds(duracion); 
+        moveSpeed = 10;
+        Debug.Log("Velocidad restaurada");
     }
 }
