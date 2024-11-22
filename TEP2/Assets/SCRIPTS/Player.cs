@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 10; 
+    //para luego realizar el aumento de velocidad
+     private float lastIncreaseTime = 0f;
+     public float increaseInterval = 1;
     void Start()
     {
     }
@@ -19,6 +22,16 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward*Time.deltaTime*moveSpeed,Space.World);
+            // Aumenta la velocidad si se cumple el intervalo
+            if (Time.time - lastIncreaseTime > increaseInterval)
+            {
+                AumentoVelocidad();
+                lastIncreaseTime = Time.time; // Actualiza el tiempo del último aumento
+            }else if (Time.time - lastIncreaseTime > increaseInterval)
+            {
+                moveSpeed = Mathf.Max(10, moveSpeed - 1 * Time.deltaTime); // Baja la velocidad gradualmente
+
+            }
         }
         //izquierda
        if(Input.GetKey(KeyCode.A))
